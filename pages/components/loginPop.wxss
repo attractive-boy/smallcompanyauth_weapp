@@ -1,0 +1,107 @@
+.popup-wrap {
+    background: rgba(0,0,0,.6);
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.popup,.popup-wrap {
+    display: -webkit-flex;
+    display: flex;
+    position: fixed;
+}
+
+.popup {
+    align-items: center;
+    background: linear-gradient(180deg,#eaf3ff,#fff 10%);
+    border-radius: 36rpx 36rpx 36rpx 36rpx;
+    bottom: 337rpx;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 621rpx;
+    padding: 48rpx 36rpx 32rpx;
+    width: 646rpx;
+}
+
+.popup > .title {
+    color: #005cd9;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 600;
+    padding-bottom: 48rpx;
+    position: relative;
+}
+
+.popup > .icon {
+    height: 50rpx;
+    position: absolute;
+    right: 36rpx;
+    top: 48rpx;
+    width: 50rpx;
+}
+
+.popup > .input {
+    background: #f7f7f8;
+    border-radius: 44rpx 44rpx 44rpx 44rpx;
+    color: #232323;
+    display: -webkit-flex;
+    display: flex;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 400;
+    height: 88rpx;
+    margin-bottom: 26rpx;
+    padding: 24rpx 34rpx;
+    width: 574rpx;
+}
+
+.popup > .input > text {
+    margin-right: 24rpx;
+}
+
+.popup > .btn {
+    background: linear-gradient(270deg,#005cd9,#196cdd);
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: 600;
+    height: 88rpx;
+    justify-content: center;
+    margin: 22rpx 0 32rpx;
+    width: 574rpx;
+}
+
+.popup > .btn,.popup > .tip {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.popup > .tip {
+    color: #232323;
+    font-size: 26rpx;
+    font-weight: 400;
+    line-height: 36rpx;
+    white-space: nowrap;
+}
+
+.popup > .tip > text {
+    color: #00b593;
+    white-space: nowrap;
+    line-height: 36rpx;
+    height: 110rpx;
+}
+
+.m-checkboxLabel {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.m-checkboxLabel > .checkbox {
+    transform: scale(.5);
+}
+

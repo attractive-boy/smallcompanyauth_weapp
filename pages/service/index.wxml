@@ -1,0 +1,51 @@
+	<view class="m-warp data-v-2b66ab5a" style=" height: 100vh;" >
+		<image mode="widthFix" class="m-bg data-v-2b66ab5a" src="{{backgroud}}">		</image>
+		<view class="wrap data-v-2b66ab5a" >
+			<view class="m-head data-v-2b66ab5a">
+				<image mode="true" class="title data-v-2b66ab5a" src="">				</image>
+        
+			</view>
+      <view style="width:100%;display: flex; align-items: center; background: linear-gradient(to top, #FFFFFF, rgb(12, 44, 170));">
+			<view class="m-msg data-v-2b66ab5a" style="margin: 0 auto; margin-top: 100rpx; height: 70vh;" >
+				<view bindtap="makephonecall" class="row data-v-2b66ab5a"  >
+					<view class="left data-v-2b66ab5a">
+						<view class="data-v-2b66ab5a">
+              ☎ 	客服电话
+						</view>
+					</view>
+					<view class="right data-v-2b66ab5a">
+						<view class="data-v-2b66ab5a">
+            {{kftelphone}} >
+						</view>
+						
+					</view>
+				</view>
+				<view bindtap="copyToClipboard" class="row data-v-2b66ab5a">
+					<view class="left data-v-2b66ab5a">
+						<image mode="widthFix" class="icon data-v-2b66ab5a" src="https://www.emojiall.com/img/logo/wechat.png" style="width: 60rpx;transform: translateX(-10rpx);">						</image>
+						<view class="data-v-2b66ab5a" style="transform: translateX(-16rpx);">
+							客服微信
+						</view>
+					</view>
+					<view class="right data-v-2b66ab5a">
+						<view class="data-v-2b66ab5a">
+            {{kfwechat}} >
+						</view>
+
+					</view>
+				</view>
+				<button openType="contact" class="row botton data-v-2b66ab5a">
+					<view class="left data-v-2b66ab5a">
+          
+						<view open-type="contact" bindcontact="handleContact" type="primary" class="data-v-2b66ab5a">
+              🎧在线客服
+						</view>
+					</view>
+					<view class="right data-v-2b66ab5a">
+						<view > >	</view>
+					</view>
+				</button>
+			</view>
+    </view>
+		</view>
+	</view>

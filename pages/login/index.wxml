@@ -1,0 +1,31 @@
+	<view class="m-warp data-v-2ffd878b">
+		<view class="header data-v-2ffd878b">		</view>
+		<view class="content data-v-2ffd878b">
+			<view class="data-v-2ffd878b">
+				申请获取以下权限
+			</view>
+			<text class="data-v-2ffd878b">
+				获得你的手机号用于绑定登录
+			</text>
+		</view>
+		<view bindtap="__e" class="btn data-v-2ffd878b" data-event-opts="[[tap [[tologin [$event]]]]]">
+			快速登录
+		</view>
+		<view class="tip data-v-2ffd878b">
+			<checkbox-group bindchange="__e" class="data-v-2ffd878b" data-event-opts="[[change [[checkboxChange [$event]]]]]">
+				<label class="checkboxLabel data-v-2ffd878b">
+					<checkbox class="checkbox data-v-2ffd878b" value="1">					</checkbox>
+					<view class="txt data-v-2ffd878b">
+						我已阅读并同意
+					</view>
+				</label>
+			</checkbox-group>
+			<view class="item data-v-2ffd878b">
+				《服务条款》
+			</view>
+			和
+			<view class="item data-v-2ffd878b">
+				《隐私政策》
+			</view>
+		</view>
+	</view>

@@ -1,0 +1,11 @@
+	<view class="m-msg data-v-39bd8559">
+		<view class="title data-v-39bd8559">
+    {{content.title}}
+		</view>
+		<view class="time data-v-39bd8559">
+    {{content.updated_at}}
+		</view>
+		<view class="content data-v-39bd8559">
+      <rich-text nodes="{{content.content}}"></rich-text>
+		</view>
+	</view>

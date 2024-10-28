@@ -1,0 +1,132 @@
+<view class="m-warp data-v-34fa2cf8">
+  <view class="m-head data-v-34fa2cf8"> </view>
+  <view class="m-msg data-v-34fa2cf8" >
+    <view class="m-form data-v-34fa2cf8" wx:for="{{requestList}}">
+      <view class="title data-v-34fa2cf8">
+        企业认证
+      </view>
+      <view class="data data-v-34fa2cf8">
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            认证公司
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <input placeholder="请输入公司名称" type="text" class="input data-v-34fa2cf8" disabled="true" value="{{item.CompanyName}}"> </input>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            统一信用代码
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <input value="{{item.UnifiedSocialCreditCode}}" class="input data-v-34fa2cf8" disabled="true" placeholder="请输入信用代码" type="text"> </input>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            法人代表
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <input value="{{item.LegalPersonName}}" class="input data-v-34fa2cf8" disabled="true" placeholder="请输入法人名字" type="text"> </input>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8" style="white-space: nowrap; display: flex; flex-direction: row;align-items: center;">
+            <view class="data-v-34fa2cf8" style="color: red;">
+              *
+            </view>
+            身份证号
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <input maxlength="30" placeholder="请输入身份证号" type="text" class="input data-v-34fa2cf8" value="{{item.IDCardNumber}}" bindblur="idcardblur" data-id="{{item.ID}}" data-index="{{index}}"> </input>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8" style="white-space: nowrap; display: flex; flex-direction: row;align-items: center;">
+            <view class="data-v-34fa2cf8" style="color: red;">
+              *
+            </view>
+            年营业额
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <input placeholder="请输入金额" type="text" class="input data-v-34fa2cf8" maxlength="9" value="{{item.Revenue}}" bindblur="revenueblur" data-id="{{item.ID}}" data-index="{{index}}"> </input>
+            <view class="unit data-v-34fa2cf8">
+              万元
+            </view>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            服务项目
+          </view>
+          <view class="right data-v-34fa2cf8" bind:tap="onServicePicker" data-id = "{{index}}" data-name = "{{item.ServiceItems}}">
+            <view class="data-v-34fa2cf8">
+              {{item.ServiceItems == "" ? "请选择服务项目" : item.ServiceItems}}
+            </view>
+            <view class="icon data-v-34fa2cf8"> > </view>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            检验费用
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <view class="price data-v-34fa2cf8">
+              {{item.ServiceItemsAmount}}元
+            </view>
+            <view class="tip data-v-34fa2cf8">
+              由官方备案征信机构提供核验服务
+            </view>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            随机立减
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <view class="price data-v-34fa2cf8">
+              {{item.DiscountAmount}}元
+            </view>
+            <view class="tip data-v-34fa2cf8">
+              系统随机立减红包
+            </view>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            检验说明
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <view class="input data-v-34fa2cf8">
+              {{item.Description}}
+            </view>
+          </view>
+        </view>
+        <view class="row data-v-34fa2cf8">
+          <view class="left data-v-34fa2cf8">
+            订单状态
+          </view>
+          <view class="right data-v-34fa2cf8">
+            <view class="tag-wrap data-v-34fa2cf8">
+              <view class="tag  data-v-34fa2cf8 {{item.IsPaid == 1 ? 'green' :'red'}}">
+                {{item.IsPaid == 1 ? "已支付" : "未支付"}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="payorlogin" class="pay-btn data-v-34fa2cf8" data-id="{{item.ID}}">
+        {{islogin == false ? "点击登录" : "支付"}}
+      </view>
+      <view wx:if="{{index == requestList.length - 1}}" bind:tap="logout" style="color:#808080;font-size: large;text-align: center;font-weight: bold;margin-top: 40rpx;">退出登录</view>
+    </view>
+  </view>
+
+</view>
+
+<t-picker visible="{{serviceVisible}}" value="{{serviceValue}}" title="选择服务项目" cancelBtn="取消" confirmBtn="确认" usingCustomNavbar bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="onPickerCancel">
+    <t-picker-item options="{{services}}">
+    </t-picker-item>
+  </t-picker>
+
+  <loginPop wx:if="{{showpop}}" bind:close="closepop"></loginPop>

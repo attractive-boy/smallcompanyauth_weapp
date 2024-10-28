@@ -1,0 +1,184 @@
+.m-wrap {
+    background: #f7f7f7;
+    width: 100%;
+}
+
+.m-search {
+    background: #005cd9;
+    box-sizing: border-box;
+    height: 118rpx;
+    padding: 20rpx 26rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.m-search > .search {
+    background: #f6f7f7;
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 78rpx;
+    justify-content: space-between;
+    padding: 19rpx 26rpx;
+    width: 698rpx;
+}
+
+.m-search > .search > .left {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1;
+}
+
+.m-search > .search .icon {
+    height: 40rpx;
+    width: 40rpx;
+    z-index: 10;
+}
+
+.m-search > .search > .left > .input {
+    color: #232323;
+    flex: 1;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-left: 8rpx;
+}
+
+.m-search > .search > .right {
+    z-index: 8;
+}
+
+.m-msg {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 118rpx;
+    width: 100%;
+}
+
+.m-msg > .result {
+    color: #232323;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 400;
+    padding: 19rpx 26rpx;
+    display: flex;
+}
+
+.m-msg > .result > view {
+    color: #00a206;
+}
+
+.m-msg > .company {
+    background: #fff;
+    margin-bottom: 24rpx;
+    padding: 32rpx 26rpx;
+}
+
+.m-msg > .company > .name {
+    margin-bottom: 5rpx;
+}
+
+.m-msg > .company > .name,.m-msg > .company > .name > .left {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.m-msg > .company > .name > .left {
+    align-items: center;
+    background: linear-gradient(315deg,#005cd9,#2175e8);
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    color: #fff;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 600;
+    height: 52rpx;
+    margin-right: 10rpx;
+    width: 52rpx;
+}
+
+.m-msg > .company > .name > .right {
+    color: #232323;
+    flex: 1;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m-msg > .company > .code {
+    color: #7e7e7e;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-bottom: 32rpx;
+    margin-left: 62rpx;
+}
+
+.m-msg > .company > .message {
+    background: #f7f7f7;
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    height: 132rpx;
+    margin-bottom: 32rpx;
+    width: 698rpx;
+}
+
+.m-msg > .company > .message,.m-msg > .company > .message > .txt {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.m-msg > .company > .message > .txt {
+    flex-direction: column;
+    width: 33%;
+}
+
+.m-msg > .company > .message > .txt > .top {
+    color: #7e7e7e;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-bottom: 7rpx;
+}
+
+.m-msg > .company > .message > .txt > .bottom {
+    color: #232323;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 400;
+}
+
+.m-msg > .company > .message > .line {
+    background: #e8e8e8;
+    height: 66rpx;
+    opacity: 1;
+    width: 2rpx;
+}
+
+.m-msg > .company > .message > .txt > .blue {
+    color: #005cd9;
+}
+
+.m-msg > .company > .btn {
+    align-items: center;
+    background: linear-gradient(180deg,#00a206,#00b907);
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 600;
+    height: 88rpx;
+    justify-content: center;
+    width: 680rpx;
+}
+

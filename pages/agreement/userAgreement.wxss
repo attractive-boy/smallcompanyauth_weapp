@@ -1,0 +1,19 @@
+.m-agreement {
+    padding: 28rpx 26rpx;
+}
+
+.m-agreement,.m-msg {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.m-msg {
+    background-color: #fff;
+    border-radius: 30rpx;
+    color: #232323;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    padding: 26rpx;
+    text-align: justify;
+}
+

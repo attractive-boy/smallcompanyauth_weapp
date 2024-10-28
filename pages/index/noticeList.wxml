@@ -1,0 +1,7 @@
+<view class="bottom data-v-5d77f23a" wx:for="{{notice}}" style="width: 100%;background-color: white;border-radius: 5rpx;border-radius: 10rpx;">
+      <view style="font-weight: bold;font-size: 35rpx;margin-top: 40rpx;margin-left: 30rpx;">{{item.title}}</view>
+      <view style="display: flex;justify-content: space-between;margin: 30rpx;">
+        <view>◔{{item.updated_at}}</view>
+        <view style="color: blue;"  bind:tap="goTodetail" data-id="{{item.id}}">查看详情 -></view>
+      </view>
+    </view>

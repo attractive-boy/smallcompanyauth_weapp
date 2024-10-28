@@ -1,0 +1,71 @@
+{
+  "__compileDebugInfo__": {
+    "ciVersion": "1.0.119",
+    "compileSetting": {
+      "autoAudits": false,
+      "babelSetting": {
+        "disablePlugins": [],
+        "ignore": [],
+        "outputPath": ""
+      },
+      "bigPackageSizeSupport": true,
+      "bundle": true,
+      "checkInvalidKey": true,
+      "compileHotReLoad": true,
+      "condition": false,
+      "coverView": false,
+      "disableUseStrict": false,
+      "enhance": false,
+      "es6": true,
+      "ignoreDevUnusedFiles": true,
+      "lazyloadPlaceholderEnable": false,
+      "localPlugins": false,
+      "minified": true,
+      "minifyWXML": true,
+      "minifyWXSS": true,
+      "packNpmManually": false,
+      "packNpmRelationList": [],
+      "postcss": true,
+      "preloadBackgroundData": false,
+      "scriptsEnable": false,
+      "showES6CompileOption": false,
+      "showShadowRootInWxmlPanel": false,
+      "skylineRenderEnable": false,
+      "uglifyFileName": false,
+      "uploadWithSourceMap": true,
+      "urlCheck": false,
+      "useApiHook": true,
+      "useApiHostProcess": true,
+      "useCompilerPlugins": false,
+      "useIsolateContext": true,
+      "useLanDebug": false,
+      "useMultiFrameRuntime": true,
+      "useStaticServer": false
+    },
+    "devtoolsVersion": "1.06.2303220",
+    "from": "devtools",
+    "useNewCompileModule": true
+  },
+  "miniprogramRoot": "",
+  "appid": "wx88d871890e52f7cf",
+  "compileType": "miniprogram",
+  "libVersion": "3.6.1",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "es6": true,
+    "enhance": true
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

@@ -1,0 +1,40 @@
+<view class="m-wrap">
+  <view class="m-search">
+    <view class="search">
+      <view class="left">
+        <text style="width: 40rpx; margin-left: 10rpx;">🔍</text>
+        <input bindblur="onblur" bindinput="oninput" class="input" maxlength="30" placeholder="请输入公司名称" type="text" value="{{content}}" />
+      </view>
+      <!-- <view bindtap="clearSearch" class="right"> X </view> -->
+    </view>
+  </view>
+  <view class="m-msg">
+    <view class="result">
+      搜索到
+      <view style="margin: 0 10rpx;">
+        {{companylist.length}}
+      </view>
+      条结果
+    </view>
+    <view wx:for="{{companylist}}" style="width: 100vw; background-color: white;padding: 10rpx;margin-bottom: 20rpx;">
+      <view>
+        <text style="display: inline-block; width: 50rpx;height: 50rpx; font-size: 35rpx; line-height: 50rpx; border-radius: 3rpx; background-color: #0078D4; color: white;font-weight: bold; text-align: center;border-radius: 10rpx;">{{item.abbreviation}}</text>
+        <text style="font-size: 35rpx;font-weight: bold;display: inline-block; margin-left: 20rpx;">
+          {{item.name}}
+        </text>
+      </view>
+      <view style="display: inline-block;margin-left: 60rpx; color: #808080;">
+      统一信用代码：{{item.creditCode}}
+      </view>
+      <view >
+        <t-grid border="{{border}}" column="{{3}}">
+          <t-grid-item text="法人代表" description="{{item.legalPersonName}}" />
+          <t-grid-item text="注册资金" description="****" />
+          <t-grid-item text="注册时间" description="{{item.registerDate}}" />
+        </t-grid>
+      </view>
+      <t-button theme="primary" size="large"  block  bindtap="handleButtonClick" data-name="{{item.name}}">立即认证</t-button>
+    </view>
+  </view>
+
+</view>

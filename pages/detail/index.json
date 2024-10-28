@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "小微企业单位服务",
+    "usingComponents": {
+      "t-radio-group": "tdesign-miniprogram/radio-group/radio-group",
+      "t-radio": "tdesign-miniprogram/radio/radio",
+      "t-icon": "tdesign-miniprogram/icon/icon"
+    }
+}

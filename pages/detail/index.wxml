@@ -1,0 +1,90 @@
+	<view class="m-wrap data-v-5fcb7f0c">
+		<view class="m-message data-v-5fcb7f0c">
+			<view style="margin-left: 30rpx;">
+        <text style="display: inline-block; width: 50rpx;height: 50rpx; font-size: 35rpx; line-height: 50rpx; border-radius: 3rpx; background-color: #0078D4; color: white;font-weight: bold; text-align: center;border-radius: 10rpx;">{{company.abbreviation}}</text>
+        <text style="font-size: 35rpx;font-weight: bold;display: inline-block; margin-left: 20rpx;">
+          {{company.name}}
+        </text>
+      </view>
+			<view class="code data-v-5fcb7f0c">
+				统一信用代码：{{company.creditCode}}
+			</view>
+			<view class="line data-v-5fcb7f0c">			</view>
+			<view class="message data-v-5fcb7f0c">
+				<view class="txt data-v-5fcb7f0c">
+					<view class="top data-v-5fcb7f0c">
+						法人代表
+					</view>
+					<view class="bottom blue data-v-5fcb7f0c">
+          {{company.legalPersonName}}
+					</view>
+				</view>
+				<view class="line data-v-5fcb7f0c">				</view>
+				<view class="txt data-v-5fcb7f0c">
+					<view class="top data-v-5fcb7f0c">
+						注册资金
+					</view>
+					<view class="bottom data-v-5fcb7f0c">
+          ****
+					</view>
+				</view>
+				<view class="line data-v-5fcb7f0c">				</view>
+				<view class="txt data-v-5fcb7f0c">
+					<view class="top data-v-5fcb7f0c">
+						注册时间
+					</view>
+					<view class="bottom data-v-5fcb7f0c">
+          {{company.registerDate}}
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="m-flow data-v-5fcb7f0c">
+			<image mode="true" class="img data-v-5fcb7f0c" src="{{authenticatelog}}">			</image>
+		</view>
+		<view class="m-cost data-v-5fcb7f0c">
+			<t-radio-group value="{{value}}" bind:change="onChange" style="display: flex; flex-direction: row;border: 1px solid #0078D4; border-radius: 20rpx;overflow: hidden;" >
+        <view wx:for="{{selectcard}}" wx:key="index" class="card {{ index == (selectcard.length - 1) ? '' : 'right-line'}}  " >
+          <t-radio value="{{index}}" label="{{item.service_name}}" icon="none" style="height:10rpx; position: absolute; font-size: 30rpx; color: #0078D4; width: 101%;height: 101%; {{index == value ? 'background-color:#0078D4' : ''}}"   />
+        </view>
+        <view class="separator"></view>
+      </t-radio-group>
+			<view class="content data-v-5fcb7f0c">
+				<view class="row data-v-5fcb7f0c">
+					<view class="left data-v-5fcb7f0c">
+						服务项目：{{selectcard[value].service_name}}
+					</view>
+					<view class="green data-v-5fcb7f0c">
+					</view>
+				</view>
+				<view class="row data-v-5fcb7f0c">
+					<view class="left data-v-5fcb7f0c">
+						检验费用：
+					</view>
+					<view class="red data-v-5fcb7f0c">
+						￥{{selectcard[value].price}}
+					</view>
+				</view>
+				<view class="row data-v-5fcb7f0c">
+					<view class="left data-v-5fcb7f0c">
+						检验说明：{{selectcard[value].description}}
+					</view>
+				</view>
+			</view>
+		</view> 
+		<view class="m-bottom data-v-5fcb7f0c">
+			<view class="row data-v-5fcb7f0c">
+				<view class="left data-v-5fcb7f0c">
+					<button class="service m-button data-v-5fcb7f0c" openType="contact">
+						<image mode="widthFix" class="icon data-v-5fcb7f0c" src="{{kficon}}" style="width: 50rpx;height: 50rpx;">						</image>
+						<view class="text data-v-5fcb7f0c">
+							客服
+						</view>
+					</button>
+				</view>
+				<view bindtap="submitForm" class="confirm data-v-5fcb7f0c" >
+					提交订单
+				</view>
+			</view>
+		</view>
+	</view>

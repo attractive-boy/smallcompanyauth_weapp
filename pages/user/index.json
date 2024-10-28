@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "小微企业单位服务",
+    "usingComponents": {
+      "t-picker": "tdesign-miniprogram/picker/picker",
+      "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
+        "t-cell":"tdesign-miniprogram/cell/cell",
+        "loginPop": "../components/loginPop"
+    }
+}

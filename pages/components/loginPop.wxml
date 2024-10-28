@@ -1,0 +1,45 @@
+	<view  class="popup-wrap" >
+		<view  class="popup" >
+			<view class="title">
+				手机登录
+			</view>
+			<view bindtap="close" class="icon" > X </view>
+			<view class="input">
+				<view>
+					手机号
+				</view>
+        <view style="margin-left: 50rpx;">
+				<input  maxlength="20" placeholder="请输入手机号" type="text" value="" bindinput="onphonenumberInput">				</input>
+      </view>
+			</view>
+
+			<view class="input">
+				<view>
+					认证码
+				</view>
+        <view style="margin-left: 50rpx;">
+				<input type="text" value="" bindinput="onPauthcodeInput"  maxlength="10" placeholder="请输入认证码">				</input>
+      </view>
+			</view>
+			<view bindtap="confirm" class="btn"  loading="">
+				登录
+			</view>
+			<view class="tip">
+				<checkbox-group bindchange="changecheck" >
+					<label class="m-checkboxLabel">
+						<checkbox class="checkbox" value="1">						</checkbox>
+						<view class="txt">
+							我已阅读并同意
+						</view>
+					</label>
+				</checkbox-group>
+				<text  bindtap="touserAgreement">
+					《用户协议》
+				</text>
+				与
+				<text bindtap="toprivacyAgreement" >
+					《隐私协议》
+				</text>
+			</view>
+		</view>
+	</view>

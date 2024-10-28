@@ -1,0 +1,63 @@
+<view class="m-warp data-v-5d77f23a">
+  <view class="m-head data-v-5d77f23a">
+    <t-swiper t-class="data-v-5d77f23a" current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" list="{{swiperList}}" navigation="{{ { type: 'dots-bar' } }}" />
+  </view>
+  <view class="data-v-5d77f23a" style="height:364rpx;"> </view>
+  <view class="m-msg data-v-5d77f23a">
+    <view class="top data-v-5d77f23a">
+      <view class="title data-v-5d77f23a">
+        <image style="width: 70rpx;height: 70rpx;" src="{{newnoticeicon}}" mode="true"> </image>
+        <text style="height: 70rpx; line-height: 70rpx; font-size: 35rpx;font-weight: bold;">最新公告</text>
+
+      </view>
+      <view bindtap="goToNoticeList" class="more data-v-5d77f23a">
+        更多 >
+
+      </view>
+    </view>
+    <view class="bottom data-v-5d77f23a" wx:for="{{notice}}" style="width: 100%;background-color: white;border-radius: 5rpx;border-radius: 10rpx;">
+      <view style="font-weight: bold;font-size: 35rpx;margin-top: 40rpx;margin-left: 30rpx;">{{item.title}}</view>
+      <view style="display: flex;justify-content: space-between;margin: 30rpx;">
+        <view>◔{{item.updated_at}}</view>
+        <view style="color: blue;" bind:tap="goTodetail" data-id="{{item.id}}">查看详情 -></view>
+      </view>
+    </view>
+  </view>
+  <view class="m-search data-v-5d77f23a">
+    <view class="search data-v-5d77f23a">
+      <view class="title data-v-5d77f23a">
+        <image mode="widthFix" style="width: 70rpx;height: 70rpx;" src="{{companyicon}}"> </image>
+        企业认证
+      </view>
+      <view class="input data-v-5d77f23a">
+        <view class="left data-v-5d77f23a">
+          <text style="width: 40rpx; margin-left: 10rpx;">🔍</text>
+          <input maxlength="30" placeholder="搜索企业名称去认证" type="text" value="" bindinput="changeqyname" class="data-v-5d77f23a"> </input>
+        </view>
+        <view class="right data-v-5d77f23a">
+          <view class="triangle data-v-5d77f23a"> </view>
+          <view bindtap="search" class="btn data-v-5d77f23a" >
+            搜索
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="m-bottom data-v-5d77f23a">
+    <view class="top data-v-5d77f23a">
+      <image mode="true" class="icon data-v-5d77f23a" src="{{companynumicon1}}"> </image>
+      <view class="txt data-v-5d77f23a">
+        已认证
+        <view class="green data-v-5d77f23a">
+          {{autnum}}
+        </view>
+        家企业
+      </view>
+      <image mode="true" class="icon data-v-5d77f23a" src="{{companynumicon2}}"> </image>
+    </view>
+    <view class="bottom data-v-5d77f23a">
+      备案号：{{bah}}
+    </view>
+  </view>
+</view>
+<loginPop wx:if="{{showpop}}" bind:close="closepop"></loginPop>

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "小微企业单位服务",
+    "usingComponents": {
+      "t-swiper": "tdesign-miniprogram/swiper/swiper",
+      "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
+      "loginPop": "../components/loginPop"
+    }
+}
